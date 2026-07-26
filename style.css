@@ -16,7 +16,7 @@ body {
     background-color: black;
     color: yellow;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow-x: hidden; /* يمنع ظهور شريط التمرير الأفقي */
+    overflow-x: hidden; /* يمنع ظهور شريط التمرير الأفقي وتآكل الأطراف */
 }
 
 p {
@@ -119,26 +119,35 @@ nav {
     min-height: 100vh;
     flex-direction: column;
     gap: 15px;
-    padding: 100px 20px 40px; /* مسافة من الأكتاف لتجنب الهيدر الثابت */
+    padding: 120px 20px 40px; /* مسافة 120px علوية لتجنب غطاء النيفبار */
     text-align: center;
+}
+
+.main-content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
 .main-content p {
     text-align: center;
     width: 100%;
-    max-width: 400px; /* يمنع خروج النص برة الشاشات الصغيرة */
+    max-width: 600px; /* يسمح للنص بالتمدد بدون الخروج عن الحدود */
     line-height: 1.6;
+    font-size: 1.05rem;
+    word-wrap: break-word; /* يضمن عدم خروج الكلمات الطويلة */
 }
 
 .btn-group {
     display: flex;
     gap: 15px;
+    margin-top: 10px;
 }
 
 .btn1,
 .btn2 {
     background-color: yellow;
-    padding: 12px 20px;
+    color: black;
+    padding: 12px 24px;
     border-radius: 7px;
     border: none;
     font-weight: bold;
@@ -148,7 +157,7 @@ nav {
 
 .btn1:hover,
 .btn2:hover {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 /* ==========================================
@@ -156,7 +165,7 @@ nav {
    ========================================== */
 .services {
     min-height: 100vh;
-    padding: 60px 20px;
+    padding: 80px 20px 40px;
 }
 
 .services h1 {
@@ -193,7 +202,6 @@ nav {
     padding: 40px 25px;
     border-radius: 5px;
     position: relative;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 15px;
 }
 
@@ -207,29 +215,12 @@ nav {
     transition: color 0.3s;
 }
 
-.card-1::after {
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.card-1:hover::after {
-    width: 100%;
-    height: 100%;
-    background-color: #08080e;
-    opacity: 0.2;
-    transition: all 0.3s;
-}
-
 /* ==========================================
    5. FEATURES SECTION
    ========================================== */
 .fuetures {
     min-height: 100vh;
-    padding: 60px 20px;
+    padding: 80px 20px 40px;
 }
 
 .fuetures h1 {
@@ -300,7 +291,7 @@ nav {
     margin: 0 auto;
     gap: 40px;
     min-height: 100vh;
-    padding: 60px 20px;
+    padding: 80px 20px 40px;
     align-items: center;
 }
 
@@ -365,7 +356,7 @@ nav {
    ========================================== */
 .recent-news {
     min-height: 100vh;
-    padding: 60px 20px;
+    padding: 80px 20px 40px;
 }
 
 .recent-news h1 {
@@ -404,28 +395,6 @@ nav {
     position: relative;
     overflow: hidden;
     gap: 10px;
-}
-
-.card-6::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: rgb(252, 252, 81);
-    opacity: 0.2;
-    transition: all 0.3s;
-    z-index: 0;
-}
-
-.card-6:hover::after {
-    height: 100%;
-}
-
-.card-6 > * {
-    position: relative;
-    z-index: 1;
 }
 
 .card-6 img {
@@ -544,6 +513,21 @@ nav {
         font-size: 17px;
     }
 
+    .main-content {
+        padding-top: 130px; /* زيادة المساحة العلوية في الموبايل */
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .main-content h1 {
+        font-size: 22px;
+    }
+
+    .main-content p {
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+
     .choose {
         flex-direction: column;
         height: auto;
@@ -558,13 +542,5 @@ nav {
     .left h1::after {
         left: 50%;
         transform: translateX(-50%);
-    }
-
-    .main-content h1 {
-        font-size: 24px;
-    }
-
-    .main-content p {
-        font-size: 0.95rem;
     }
 }
