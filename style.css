@@ -18,7 +18,10 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden; /* يمنع ظهور شريط التمرير الأفقي وتآكل الأطراف */
 }
-
+p, body {
+    -webkit-text-size-adjust: 100%; /* بيمنع كروم أندرويد إنه يكبر الخط لوحده ويخرج برة الشاشة */
+    text-size-adjust: 100%;
+}
 p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -129,12 +132,12 @@ nav {
 }
 
 .main-content p {
-    text-align: center;
-    width: 100%;
-    max-width: 600px; /* يسمح للنص بالتمدد بدون الخروج عن الحدود */
-    line-height: 1.6;
-    font-size: 1.05rem;
-    word-wrap: break-word; /* يضمن عدم خروج الكلمات الطويلة */
+   width: 90%;            /* استخدام نسبة مئوية بدلاً من px */
+    max-width: 600px;      /* أقسى عرض على الشاشات الكبيرة */
+    margin: 0 auto;        /* تتسيط النص */
+    word-break: break-word;/* كسر الكلمات الطويلة حتى لا تخرج عن الشاشة */
+    overflow-wrap: break-word;
+    padding: 0 10px;
 }
 
 .btn-group {
