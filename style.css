@@ -538,8 +538,8 @@ gap: 2rem;
         }
 
         .main-content {
-            margin: 0 6rem;
-            padding: 3rem;
+            margin: 0 2rem;
+          
         }
 
         .main-content h1 {
@@ -549,8 +549,9 @@ gap: 2rem;
 
         .main-content p {
             text-align: center;
-            font-size: 0.7rem;
-          ;
+            font-size: 0.5rem;
+            overflow: hidden;
+            
         }
 
         .btn1,
