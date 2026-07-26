@@ -548,6 +548,8 @@ gap: 2rem;
 
         .main-content p {
             text-align: center;
+            font-size: 0.7rem;
+            padding: 10px;
         }
 
         .btn1,
