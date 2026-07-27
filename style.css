@@ -38,7 +38,7 @@ p, body {
 }
 
 nav {
-    display: flex;
+    display : flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
@@ -120,12 +120,21 @@ nav {
 
 }
 
-.btn1,.btn2 {
+.btn1{
     border: none;
     background-color: yellow;
     padding: 15px;
     border-radius: 5px;
     cursor: pointer;
+}
+.btn2{
+      border: none;
+    background-color: yellow;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
 .btn1:hover{
